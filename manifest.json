@@ -1,0 +1,38 @@
+{
+  "name": "Browser Extension Template",
+  "description": "Browser Extension Template",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Browser Extension Template"
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "src/content/content.tsx"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.ts"
+  }
+}
