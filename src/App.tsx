@@ -9,6 +9,7 @@ function App() {
     addWebsite,
     removeWebsite,
     updateWebsite,
+    reorderWebsites,
   } = useStorage();
 
   if (isLoading) {
@@ -36,6 +37,7 @@ function App() {
           websites={websites}
           onRemoveWebsite={removeWebsite}
           onUpdateWebsite={updateWebsite}
+          onReorderWebsites={reorderWebsites}
         />
 
         {websites.length === 0 && (

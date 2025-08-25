@@ -51,11 +51,16 @@ export function useStorage() {
     setWebsites(prev => prev.map(w => w.id === id ? { ...w, url: newUrl } : w));
   };
 
+  const reorderWebsites = (newWebsites: Website[]) => {
+    setWebsites(newWebsites);
+  };
+
   return {
     websites,
     isLoading,
     addWebsite,
     removeWebsite,
     updateWebsite,
+    reorderWebsites,
   };
 }
