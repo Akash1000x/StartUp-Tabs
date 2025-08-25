@@ -17,7 +17,7 @@
     },
     "default_title": "Launch website on startup"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "tabs"],
   "host_permissions": ["http://localhost:5173/"],
   "background": {
     "service_worker": "src/background.ts"
