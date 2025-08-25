@@ -1,6 +1,6 @@
 {
-  "name": "Browser Extension Template",
-  "description": "Browser Extension Template",
+  "name": "Launch website on startup",
+  "description": "Launch website on startup",
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
@@ -15,23 +15,10 @@
       "48": "icon48.png",
       "128": "icon128.png"
     },
-    "default_title": "Browser Extension Template"
+    "default_title": "Launch website on startup"
   },
-  "host_permissions": ["<all_urls>"],
-  "permissions": [
-    "tabs",
-    "storage"
-  ],
-  "content_scripts": [
-    {
-      "js": [
-        "src/content/content.tsx"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ],
+  "permissions": ["storage"],
+  "host_permissions": ["http://localhost:5173/"],
   "background": {
     "service_worker": "src/background.ts"
   }
